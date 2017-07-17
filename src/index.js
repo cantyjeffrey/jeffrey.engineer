@@ -3,10 +3,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
-import App from "./App";
+import App from "./components/App";
 import registerServiceWorker from "./registerServiceWorker";
 
-import "./global-styles";
+import "./styles/global-styles";
 
 const render = Component => {
   ReactDOM.render(
@@ -20,7 +20,7 @@ const render = Component => {
 render(App);
 
 if (module.hot) {
-  module.hot.accept("./App", () => {
+  module.hot.accept("./components/App", () => {
     render(App);
   });
 }
